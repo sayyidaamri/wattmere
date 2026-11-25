@@ -1,0 +1,30 @@
+/* product film scenes — positions in cqw so they scale with the stage */
+.scn .win{position:absolute;background:#fff;border:1px solid var(--line);border-radius:.9cqw;overflow:hidden;box-shadow:0 1cqw 3cqw rgba(11,20,48,.14)}
+.scn .tb{display:flex;align-items:center;gap:.9cqw;height:3.6cqw;padding:0 1.4cqw;border-bottom:1px solid var(--mist2);font:600 1.25cqw/1 var(--sans)}
+.scn .tb .glf{width:1.6cqw;height:1.6cqw}.scn .tb em{margin-left:auto;font-style:normal;font-weight:500;font-size:1.05cqw;color:var(--mute);display:flex;gap:.6cqw;align-items:center}
+.scn .chip{background:var(--ok);border-radius:.4cqw;padding:.25cqw .6cqw;font:500 .95cqw/1.4 var(--sans);color:var(--ink)}
+.scn .tx{position:absolute;font:400 1.35cqw/1.5 var(--sans)}
+.scn .nd{position:absolute;background:#fff;border:1px solid var(--line);border-radius:.6cqw;padding:.9cqw 1.1cqw;font:400 1.05cqw/1.45 var(--sans);color:var(--mute)}
+.scn .nd b{display:block;font-weight:600;color:var(--ink);margin:.5cqw 0 .2cqw}.scn .nd .tg{display:inline-flex;gap:.45cqw;align-items:center;border:1px solid var(--line);border-radius:.35cqw;padding:.15cqw .55cqw;color:var(--ink);font-weight:500}.scn .nd .tg>svg{width:1.1cqw;height:1.1cqw}
+.scn .dotbg{position:absolute;background:radial-gradient(var(--mist2) 1px,transparent 1.2px) 0 0/1.1cqw 1.1cqw #fff}
+.scn .b1{display:inline-block;background:var(--accent);color:#fff;border-radius:.4cqw;font:600 1.2cqw/1 var(--sans);padding:.85cqw 1.2cqw}.scn .b2{display:inline-block;background:#fff;border:1px solid var(--line2);border-radius:.4cqw;font:600 1.2cqw/1 var(--sans);padding:.85cqw 1.2cqw;color:var(--ink)}
+.scn .tgl{display:inline-block;width:5.6cqw;height:3.1cqw;border-radius:3cqw;background:var(--accent);position:relative}.scn .tgl::after{content:"";position:absolute;right:.35cqw;top:.35cqw;width:2.4cqw;height:2.4cqw;border-radius:50%;background:#fff}
+.scn svg.lnz{position:absolute;inset:0;width:100%;height:100%;stroke:var(--line2);fill:none;stroke-width:1.2}
+.scn .row{display:grid;align-items:center;border-bottom:1px solid var(--mist);font:400 1.15cqw/1.4 var(--sans);padding:0 1.6cqw;height:4.4cqw}.scn .row img{width:2cqw;height:2cqw;border-radius:50%;object-fit:cover}.scn .row span{display:flex;gap:.7cqw;align-items:center}
+.scn .gl{width:100%;height:100%}
+.scn.go .ani{animation:f-up .6s var(--ease) both;animation-delay:var(--d,0s)}
+.scn.go .pop{animation:f-pop .5s var(--ease) both;animation-delay:var(--d,0s)}
+.scn.go .typ{animation:f-typ var(--t,1.4s) steps(36) both;animation-delay:var(--d,0s)}
+.scn.go .curm{animation:f-cur 1.3s var(--ease) both;animation-delay:var(--d,0s)}
+.scn.go .drw{stroke-dasharray:1;animation:f-drw 1.8s var(--ease) both;animation-delay:var(--d,0s)}
+.scn.go .pan{animation:f-pan var(--t,4s) var(--ease) both;animation-delay:var(--d,0s)}
+.scn.go .tgl{animation:f-tg .35s var(--ease) both;animation-delay:var(--d,0s)}.scn.go .tgl::after{animation:f-tk .35s var(--ease) both;animation-delay:var(--d,0s)}
+.cur{width:3cqw;height:3.4cqw}
+@keyframes f-up{from{opacity:0;transform:translateY(2cqw)}}
+@keyframes f-pop{from{opacity:0;transform:scale(.86)}}
+@keyframes f-typ{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 -2% 0 0)}}
+@keyframes f-cur{from{transform:translate(18cqw,16cqw)}}
+@keyframes f-drw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes f-pan{to{transform:translate(var(--px,0),var(--py,0)) scale(var(--ps,1))}}
+@keyframes f-tg{from{background:var(--line2)}}
+@keyframes f-tk{from{transform:translateX(-2.5cqw)}}
